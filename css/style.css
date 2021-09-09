@@ -1,0 +1,450 @@
+body{ padding:0; margin:0;  }
+a, a:focus, a:hover{ text-decoration:none; outline:none; }
+ul, li{ padding:0; margin:0; list-style:none; }
+
+/*== Fonts ==*/
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('../fonts/HalyardDisplayBlack.woff2') format('woff2'),
+        url('../fonts/HalyardDisplayBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Book';
+    src: url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Book Condensed';
+    src: url('../fonts/ITCAvantGardeStd-BkCn.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-BkCn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Bold Condensed';
+    src: url('../fonts/ITCAvantGardeStd-BoldCn.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-BoldCn.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std';
+    src: url('../fonts/ITCAvantGardeStd-Bold.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Demi Condensed';
+    src: url('../fonts/ITCAvantGardeStd-DemiCn.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-DemiCn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Demi';
+    src: url('../fonts/ITCAvantGardeStd-Demi.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-Demi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std';
+    src: url('../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Medium Condensed';
+    src: url('../fonts/ITCAvantGardeStd-MdCn.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-MdCn.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Extra';
+    src: url('../fonts/ITCAvantGardeStd-XLt.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-XLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'ITC Avant Garde Gothic Std Extra Light Condensed';
+    src: url('../fonts/ITCAvantGardeStd-XLtCn.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-XLtCn.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*== Header Start ==*/
+.navbar-default{ transition:all 0.5s; padding:20px 0; margin:0; }
+.navbar-default .logo-block{ width:142px; padding:0; transition:all 0.5s ease-in-out; margin:0; }
+.navbar-default .logo-block a{ display:block; }
+.navbar-default .logo-block a img{ width:100%; height:auto; }
+.navbar-default .rt-side{ display:flex; flex-wrap:wrap; align-items:center; padding:0; margin:0; }
+.navbar-default .rt-side .navigation{ padding:0; margin:0; }
+.navbar-default .rt-side .navigation ul li{ display:inline-block; margin:0; padding:0; }
+.navbar-default .rt-side .navigation ul li a{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:400; display:inline-block; color:#5A5D5E; text-transform:capitalize; border-radius:5px; border:2px solid transparent; transition:all 0.6s; margin:0; padding:8px 22px; }
+.navbar-default .rt-side .navigation ul li a:hover{ border-color:#0BAECA; font-weight:700; color:#0BAECA; }
+.navbar-default .rt-side .login-btn{ padding:0 0 0 35px; margin:0; }
+.navbar-default .rt-side .login-btn a{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:700; color:#fff; background:#0baeca; letter-spacing:.20px; transition: all 0.5s ease-in-out; border-radius:5px; padding:15px 45px; margin:0; }
+.navbar-default .rt-side .login-btn a:hover{ background:#058ca3; }
+.navbar-default.navbar-shrink{ box-shadow:0 0 10px 0 rgba(0,0,0,0.2); background:#1db6d1; padding:15px 0; }
+.navbar-default.navbar-shrink .logo-block{ width:130px; }
+.navbar-default.navbar-shrink .navigation ul li a{ color:#fff; }
+.navbar-default.navbar-shrink .navigation ul li a:hover{ border-color:#fff; color:#fff; }
+.navbar-default.navbar-shrink .rt-side .login-btn a{ box-shadow:0 0 4px 2px rgba(0,0,0,0.2); }
+.navbar-default a.mob_open_menu { display:none; }
+.navbar-default .navigation a.mob_close_menu { display:none; }
+
+/*== Banner Start ==*/
+/*== Banner Start ==*/
+.banner{ position:relative; margin:0; padding:0; }
+.banner .banner-img img{ width:100%; }
+.banner .desc{ position:absolute; top:50%; left:0; transform:translateY(-50%); width:100%; margin:0; padding:0; }
+.banner .desc .text-panel{ margin:0; padding:0; }
+.banner .desc .text-panel h1{ font-family:'ITC Avant Garde Gothic Std'; font-size:80px; line-height:96px; color:#353638; font-weight:bold; margin:0; padding:0 0 22px; }
+.banner .desc .text-panel h1 span{ font-family:'ITC Avant Garde Gothic Std Book'; display:block; font-weight:normal; }
+.banner .desc .text-panel p{ position:relative; font-family:'ITC Avant Garde Gothic Std Book'; font-size:19px; line-height:27px; font-weight:normal; color:#fff; width:40%; margin:0 0 50px; padding:0 0 0 25px; }
+.banner .desc .text-panel p:after{ position:absolute; top:50%; left:0; transform:translateY(-50%); content:""; width:8px; height:100%; background-image:linear-gradient(to bottom,rgba(255,255,255,0.6) 10%,#1FB9D4 100%); margin:0; padding:0;  }
+.banner .desc .text-panel .quote-btn{ padding:0; margin:0; }
+.banner .desc .text-panel .quote-btn a{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:700; color:#343537; text-transform:capitalize; letter-spacing:.20px; background:url(../images/arrow.png) no-repeat 85% center; background-size:12px; border:1px solid #343537; transition: all 0.5s ease-in-out; display:inline-block; border-radius:5px; padding:14px 55px 14px 25px; margin:0; }
+.banner .desc .text-panel .quote-btn a:hover{ padding-right:80px; background-color:#fff; border-color:transparent; background-position:90% center; }
+.banner .video-btn{ position:absolute; bottom:130px; left:45%; right:0; margin:0; padding:0; }
+.banner .video-btn a{ position:relative; background:url(../images/btn-bg.png) no-repeat top center; background-size:cover; display:inline-block; opacity:0.6; padding:50px; transition:all 0.5s; margin:0; }
+.banner .video-btn a:after{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); content:""; background:url(../images/btn-after.png); width:240px; height:240px; transition:all 0.5s; background-size:100% 100%; }
+.banner .video-btn a:hover{ opacity:1; }
+.banner .video-btn a:hover:after{ width:260px; height:260px; }
+.banner .video-btn a img{ max-width:100%; }
+
+/*== products-block Start ==*/
+.products-block{ position:relative; margin:0; padding:20px 0 70px; }
+.products-block:after{ position:absolute; top:-100px; right:0; content:""; width:684px; height:1107px; background:url(../images/rectangle3.png) no-repeat top center; background-size:100% 100%; z-index:-9; }
+.products-block h2{ font-family:'ITC Avant Garde Gothic Std'; font-size:50px; line-height:52px; color:#353638; font-weight:bold; text-align:center; margin:0; padding:0 0 70px; }
+.products-block h2 span{ position:relative; font-family:'ITC Avant Garde Gothic Std Book'; font-weight:normal; }
+.products-block h2 span:after{ position:absolute; bottom:10px; left:0; right:0; content:""; border-bottom:8px solid rgba(11, 174, 202, 0.5); }
+.products-block .row{ padding:0; margin:0; }
+.products-block .no-gutter > [class*="col-"] { padding-right:0; padding-left:0; }
+.products-block .tab-content{ position:relative; margin:50px 0 0 10px; padding:0; }
+.products-block .tab-content .img-panel{ margin:0; padding:0; }
+.products-block .tab-content img{ width:100%; }
+.products-block .tab-content .tab-pane{ position:absolute; top:0; left:17%; margin:0; padding:0; }
+.products-block .tab-content .tab-pane .tab-box{ display:flex; flex-wrap:wrap; margin:0; padding:80px 0 0 30px; }
+@media screen and (max-width: 1366px){
+    .products-block .tab-content .tab-pane .tab-box{ padding-top:45px; }
+}
+.products-block .tab-content .tab-pane .tab-box .text-block{ width:70%; margin:0; padding:0 30px 0 0; }
+.products-block .tab-content .tab-pane .tab-box .text-block h3{ font-family:'ITC Avant Garde Gothic Std Demi'; font-size:27px; line-height:32px; color:#353638; font-weight:normal; margin:0; padding:0 0 28px; }
+.products-block .tab-content .tab-pane .tab-box .text-block p{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:13px; line-height:21px; color:#686868; font-weight:normal; margin:0; padding:0 0 18px; }
+.products-block .tab-content .tab-pane .tab-box .icon-block{ width:30%; margin:0; padding:0; }
+.products-block .tab-content .tab-pane .tab-box .icon-block img{ max-width:100%; }
+.products-block .nav{ padding:0 0 0 190px; }
+@media screen and (max-width:1366px){
+    .products-block .nav{ padding:0 0 0 120px; }
+}
+
+.products-block .nav li{ margin:0; padding:0 0 20px; }
+.products-block .nav li a{ position:relative; background:#fff; display:block; border-radius:20px; transition:all 0.6s; padding:28px 42px 20px 25px; margin:0; }
+.products-block li a:after{ position:absolute; top:50%; right:40px; transform:translateY(-50%); content:""; background:url(../images/arrow2.png) no-repeat; width:8px; height:14px; background-size:100% 100%; opacity:0; transition:all 0.6s;  }
+.products-block .nav li a:hover:after{ opacity:1; right:28px; }
+.products-block .nav li a:hover{ box-shadow:0 3px 10px 0 rgba(0, 0, 0, 0.09); }
+.products-block .nav li a .box{ display:flex; flex-wrap:wrap; margin:0; padding:0; }
+.products-block .nav li a .box .img-block{ width:18%; border-radius:20px; margin:0; padding:0; }
+.products-block .nav li a .box .img-block img{ max-width:100%; height:auto; }
+.products-block .nav li a .box .text-panel{ width:80%; padding:0 0 0 30px; margin:0; }
+.products-block .nav li a .box .text-panel span{ display:block; }
+.products-block .nav li a .box .text-panel .head{ font-family:'ITC Avant Garde Gothic Std Demi'; font-size:22px; line-height:24px; color:#353638; font-weight:normal; transition:all 0.5s; padding:0 0 12px; margin:0; }
+.products-block .nav li a:hover .box .text-panel .head{ color:#0BAECA; }
+.products-block .nav li a .box .text-panel .pra{ font-family:'ITC Avant Garde Gothic Std'; font-size:13px; line-height:21px; color:#686868; font-weight:normal; padding:0; margin:0; }
+.products-block .nav li a.active { background-color:#fff; box-shadow:4px 10px 34px rgba(0, 0, 0, 0.09); color:#0BAECA; }
+.products-block .nav li a.active:after{ opacity:1; right:28px; }
+.products-block .nav li a.active .box .text-panel .head{ color:#0BAECA; }
+
+/*== paln-block Start ==*/
+.plan-block{ position:relative; background:#f5f5f5 url(../images/plan.jpg) no-repeat top center; margin:0; padding:83px 0 30px; }
+.plan-block:after{ position:absolute; top:-90px; left:0; content:""; background:url(../images/paln-after.png) no-repeat; width:164px; height:258px; background-size:100% 100%; }
+.plan-block h2{ font-family:'ITC Avant Garde Gothic Std'; font-size:50px; line-height:52px; color:#353638; font-weight:bold; text-align:center; margin:0; padding:0 0 52px; }
+.plan-block h2 span{ position:relative; font-family:'ITC Avant Garde Gothic Std Book'; font-weight:normal; z-index:9; }
+.plan-block h2 span:after{ position:absolute; bottom:10px; left:0; right:0; content:""; border-bottom:8px solid rgba(11, 174, 202, 0.5); z-index:-9; }
+.plan-block .tab-block{ margin:0; padding:0; }
+.plan-block .tab-block .nav{ width:60%; background:#EBEBF4; display:flex; flex-wrap:wrap; justify-content:space-between; border:1px solid rgba(0, 0, 0, 0.07); border-radius:30px; margin:0 auto 80px; padding:4px; }
+.plan-block .tab-block .nav li a{ font-family:'ITC Avant Garde Gothic Std Demi'; font-size:13px; line-height:15px; color:#353638; font-weight:normal; display:inline-block; border-radius:30px; transition:all 0.6s; margin:0; padding:16px 40px; }
+.plan-block .tab-block .nav li a.active{ background-color:#fff; box-shadow:2px 2px 16px rgba(0, 0, 0, 0.26); color:#0BAECA; }
+.plan-block .tab-block .tab-content{ margin:0; padding:0; }
+.plan-block .tab-block .tab-content .tab-pane{ margin:0; padding:0; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box{ display:flex; flex-wrap:wrap; justify-content:space-between; margin:0; padding:0; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box{ width:23%; box-shadow:0 4px 4px 0 rgba(0,0,0,0.1); background:#fff; border-radius:15px; text-align:center; margin:0 0 35px; transition:all 0.5s; padding:10px 40px 38px 40px; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover{ background:#0BAECA; transform:scale(1.1); }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box p{ font-family:'Roboto', sans-serif; font-size:12px; line-height:14px; color:rgba(53, 54, 56, 0.5); font-weight:400; background:#2DD0EC; display:inline-block; opacity:0; border-radius:5px; transition:all 0.5s; margin:0 0 10px; padding:4px 15px; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover p{ opacity:1; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box h3{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:22px; line-height:24px; color:#353638; font-weight:normal; transition:all 0.5s; margin:0; padding:0 0 34px; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover h3{ color:#fff; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box h3 span{ display:block; font-size:13px; color:#959595; transition:all 0.5s; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover h3 span{ color:#fff; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box h4{ font-family:'ITC Avant Garde Gothic Std Demi'; font-size:50px; line-height:52px; color:#0BAECA; font-weight:500; transition:all 0.5s; margin:0; padding:0 0 30px; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover h4{ color:#fff; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box h4 span{ font-family:'ITC Avant Garde Gothic Std Book'; display:block; font-size:13px; color:#686868; transition:all 0.5s; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover h4 span{ color:#fff; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box a{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; color:#fff; font-weight:700; display:inline-block; background:#0BAECA; border-radius:5px; transition:all 0.5s; margin:0; padding:15px 30px; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover a{ background:#fff; color:#0BAECA; }
+.plan-block .tab-block .tab-content .tab-pane .tab-box .above{ padding:10px 25px 38px; }
+
+.plan-block .tab-block .tab-content #engine .tab-box{ width:86%; margin:0 auto; }
+.plan-block .tab-block .tab-content #engine .tab-box .box{ width:31%; }
+.plan-block .tab-block .tab-content #engine .tab-box .box h5{ font-family:'ITC Avant Garde Gothic Std'; font-size:22px; color:rgba(53, 54, 56, 0.5); font-weight:normal; transition:all 0.5s; margin:0; padding:0 0 30px; }
+.plan-block .tab-block .tab-content #engine .tab-box .box:hover h5{ color:#fff; }
+.plan-block .tab-block .tab-content #engine .tab-box .box h5 span{ font-family:'ITC Avant Garde Gothic Std Book'; display:block; font-size:17px; line-height:30px; color:#353638; transition:all 0.5s; padding-bottom:8px; }
+.plan-block .tab-block .tab-content #engine .tab-box .box:hover h5 span{ color:#fff; } 
+.plan-block .tab-block .tab-content #engine .tab-box .box h6{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:17px; line-height:27px; color:#000; font-weight:normal; transition:all 0.5s; margin:0; padding:40px 0 50px; }
+.plan-block .tab-block .tab-content #engine .tab-box .box:hover h6{ color:#fff; }
+.plan-block .tab-block .tab-content #engine .tab-box .package{ padding:10px 25px 38px; }
+
+.plan-block .tab-block .tab-content #marketing .tab-box{ padding-bottom:35px; }
+.plan-block .tab-block .tab-content #marketing .text-block{ margin:0; padding:0; }
+.plan-block .tab-block .tab-content #marketing .text-block h3{ font-family:'ITC Avant Garde Gothic Std Demi'; font-size:22px; line-height:24px; color:#353638; font-weight:500; margin:0; padding:0 0 36px; }
+.plan-block .tab-block .tab-content #marketing .text-block h3 span{ font-size:34px; color:rgba(11, 174, 202, 0.5);  }
+.plan-block .tab-block .tab-content #marketing .tab-box .box:last-child h4{ color:#DADADA; }
+
+/*== About-block Start ==*/
+.about-block{ position:relative; margin:0; padding:260px 0 150px; }
+.about-block:after{ position:absolute; bottom:0; right:0; content:""; background:url(../images/about-after.png) no-repeat; width:337px; height:420px; background-size:100% 100%; }
+.about-block:before{ position:absolute; top:15px; left:0; content:""; width:789px; height:1168px; background:url(../images/rectangle1.png) no-repeat top center; background-size:100% 100%;}
+.about-block .img-panel{ position:relative; border-radius:30% 0 30% 0; overflow:hidden; box-shadow:0 0 8px 0 rgba(0,0,0,0.2); margin:0; padding:0; }
+.about-block .img-panel img{ width:100%; }
+.about-block .text-panel{ margin:0; padding:0 0 0 40px; }
+.about-block .text-panel h3{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:25px; line-height:27px; color:#0BAECA; font-weight:normal; margin:0; padding:0 0 18px; }
+.about-block .text-panel h2{ font-family:'ITC Avant Garde Gothic Std'; font-size:50px; line-height:52px; color:#353638; font-weight:bold; margin:0; padding:0 0 40px; }
+.about-block .text-panel h2 span{ position:relative; font-family:'ITC Avant Garde Gothic Std Book'; font-weight:normal; }
+.about-block .text-panel h2 span:after{ position:absolute; bottom:10px; left:0; right:0; content:""; border-bottom:8px solid rgba(11, 174, 202, 0.5); z-index:-9; }
+.about-block .text-panel p{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:17px; line-height:25px; color:#686868; font-weight:normal; margin:0; padding:0 0 30px; }
+.about-block .text-panel .more-btn{ margin:0; padding:0; }
+.about-block .text-panel .more-btn a{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:400; color:#fff; letter-spacing:.20px; background:#3BC4DC url(../images/arrow3.png) no-repeat 85% center; background-size:15px; transition:all 0.5s ease-in-out; display:inline-block; border-radius:5px; padding:15px 62px 15px 26px; margin:0; }
+.about-block .text-panel .more-btn a:hover { background-position:90% center; }
+
+/*== Contact-block Start ==*/
+.contact-block{ position:relative; margin:0; padding:120px 0 145px; }
+.contact-block .text-panel{ margin:0; padding:0 70px 0 0; }
+.contact-block .text-panel h2{ font-family:'ITC Avant Garde Gothic Std'; font-size:50px; line-height:52px; color:#353638; font-weight:bold; margin:0; padding:0 0 15px; }
+.contact-block .text-panel h2 span{ font-family:'ITC Avant Garde Gothic Std Book'; font-weight:normal; }
+.contact-block .text-panel h3{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:25px; line-height:27px; color:#0BAECA; font-weight:normal; margin:0; padding:0 0 50px; }
+.contact-block .text-panel p{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:17px; line-height:25px; color:#686868; font-weight:normal; margin:0; padding:0 0 30px; }
+.contact-block .text-panel p:last-child{ padding:0; }
+.contact-block .form-block{ position:relative; box-shadow:8px 8px 34px 0 rgba(0, 0, 0, 0.15); background:#fff; border-radius:15px; margin:0; padding:83px 40px 55px; }
+.contact-block:after{ position:absolute; top:170px; right:0; content:""; width:469px; height:642px; background:url(../images/rectangle2.png) no-repeat top center; background-size:100% 100%; z-index:-9; }
+.contact-block .form-block h3{ font-family:'ITC Avant Garde Gothic Std'; font-size:26px; line-height:28px; color:#353638; font-weight:bold; margin:0; padding:0 0 60px; }
+.contact-block .form-block h3 span{ font-family:'ITC Avant Garde Gothic Std Book'; font-weight:normal; }
+.contact-block .form-block .form-group{ margin:0 0 42px; padding:0; }
+.contact-block .form-block .form-group .form-control{ font-family:'ITC Avant Garde Gothic Std Book'; font-size:13px; line-height:15px; color:#686868; font-weight:normal; height:40px; border:none; border-radius:0; box-shadow:none; outline:none; border-bottom:2px solid #EBEBF4; margin:0; padding:0; }
+.contact-block .form-block .form-group textarea.form-control{ resize:none; height:30px; }
+.contact-block .form-block .form-group .form-control::placeholder{ color:#7e7e7e; }
+.contact-block .form-block .form-group .form-control:-ms-input-placeholder{ color:#7e7e7e; }
+.contact-block .form-block .form-group .form-control::-ms-input-placeholder{ color:#7e7e7e; }
+.contact-block .form-block .send-btn{ padding:48px 0 0; margin:0; }
+.contact-block .form-block .send-btn .btn{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:400; color:#fff; text-transform:capitalize; letter-spacing:.20px; background:#3BC4DC url(../images/arrow3.png) no-repeat 88% center; background-size:15px; box-shadow:none; outline:none; display:inline-block; transition:all 0.5s ease-in-out; border-radius:5px; padding:15px 56px 15px 28px; margin:0; }
+.contact-block .form-block .send-btn .btn:hover{ background-position:92% center; }
+.contact-block .address-block{ margin:0; padding:110px 0 0; }
+.contact-block .address-block ul{ display:flex; align-items:center; flex-wrap:wrap; justify-content:space-around; }
+.contact-block .address-block ul li{ position:relative; font-family:'ITC Avant Garde Gothic Std Book'; font-size:16px; line-height:22px; color:#353638; font-weight:normal; display:inline-block; padding:0 50px 0 85px; margin:0; }
+.contact-block .address-block ul li:before{ position:absolute; top:50%; left:0; transform:translateY(-50%); content:""; background:url(../images/location.png) no-repeat top center; width:71px; height:71px; background-size:100% 100%; }
+.contact-block .address-block ul li:nth-child(2):before{ background:url(../images/email.png); background-size:100% 100%; }
+.contact-block .address-block ul li:nth-child(3):before{ background:url(../images/phone.png); background-size:100% 100%; }
+.contact-block .address-block ul li:nth-child(1){ width:45%; }
+.contact-block .address-block ul li:last-child{ padding-right:0; }
+.contact-block .address-block ul li a{ display:inline-block; color:#353638; transition:all 0.5s; }
+.contact-block .address-block ul li a:hover{ color:#41CDE5; }
+
+/*== Clients-block Start ==*/ 
+.clients-block{ border-top:2px solid #EBEBF4; margin:0; padding:90px 0 100px; }
+.clients-block .clients-slider{ margin:0; padding:0; }
+.clients-block .clients-slider .img-panel{ margin:0; padding:0; }
+.clients-block .clients-slider .img-panel img{ max-width:100%; }
+
+/*== Checkout-block Start ==*/ 
+.checkout-block{ background:url(../images/checkout.jpg) no-repeat top center; background-size:cover; margin:0; padding:85px 0 38%; }
+.checkout-block .title{ text-align:center; margin:0; padding:0; }
+.checkout-block .title h2{ font-family:'ITC Avant Garde Gothic Std'; font-size:50px; line-height:52px; color:#353638; font-weight:bold; margin:0; padding:0 0 18px; }
+.checkout-block .title h2 span{ position:relative; font-family:'ITC Avant Garde Gothic Std Book'; font-weight:normal; z-index:9; }
+.checkout-block .title h2 span:after{ position:absolute; bottom:10px; left:0; right:0; content:""; border-bottom:8px solid rgba(11, 174, 202, 0.5); z-index:-9; }
+.checkout-block .title p{ width:50%; font-family:'ITC Avant Garde Gothic Std Book'; font-size:15px; line-height:24px; color:#686868; font-weight:normal; margin:0 auto; padding:0 0 30px; }
+.checkout-block .img-panel{ margin:0; padding:0; } 
+.checkout-block .img-panel img{ width:100%; } 
+
+/*== Footer Start ==*/
+.footer{ position:relative; padding:90px 0 70px; z-index:9; }  
+.footer:after{ position:absolute; bottom:0; right:0; content:""; background:url(../images/footer-after.png) no-repeat; width:173px; height:276px; z-index:-9; background-size:100% 100%; }
+.footer .logo-block{ width:52%; margin:0 0 30px; padding:0; } 
+.footer .logo-block a{ display:block; } 
+.footer .logo-block a img{ max-width:100%; }
+.footer .text-panel{ margin:0; padding:0; }
+.footer .text-panel p{ width:80%; font-family:'ITC Avant Garde Gothic Std'; font-size:13px; line-height:21px; color:#686868; font-weight:500; margin:0; padding:0; }  
+.footer .box{ margin:0; padding:0; }
+.footer .box h3{ font-family: 'Halyard Display'; font-size:22px; line-height:24px; color:#0BAECA; font-weight:500; margin:0; padding:0 0 28px; }
+.footer .box ul li{ font-family:'ITC Avant Garde Gothic Std'; font-size:18px; line-height:20px; font-weight:500;  display:block; padding:0 0 20px; margin:0; } 
+.footer .box ul li a{ display:inline-block; color:#686868; transition:all 0.5s; }
+.footer .box ul li a:hover{ color:#0BAECA; }
+.footer .resources h3{ padding-bottom:20px; }
+.footer .resources .social-block{ margin:0; padding:0; }
+.footer .resources .social-block ul{ display:flex; align-items:center; flex-wrap:wrap; }
+.footer .resources .social-block ul li{ padding:0 20px 0 0; }
+.footer .resources .social-block ul li a{ font-size:15px; display:flex; transition:all 0.5s; }
+.footer .resources .social-block ul li a:hover{ color:#1db6d1; }
+.footer .resources .social-block ul li a img{ max-width:100%; height:auto; }
+
+/*== Copy-right Start ==*/
+.copy-right{ margin:0; padding:0; }
+.copy-right .inner-content{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; border-top:1px solid rgba(135,146,161,0.08); margin:0; padding:25px 0 50px; }
+.copy-right .inner-content p{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:400; color:rgba(69, 88, 128, 0.5);  padding:0; margin:0; }
+.copy-right .inner-content ul li{ font-family:'Roboto', sans-serif; font-size:14px; line-height:16px; font-weight:400; display:inline-block; padding:0 0 0 25px; margin:0; }
+.copy-right .inner-content ul li a{ color:#455880; display:inline-block; transition:all 0.5s; }
+.copy-right .inner-content ul li a:hover{ color:#0BAECA; }
+
+
+/*== Media screen Start ==*/
+@media screen and (max-width:1199px){
+    .banner .video-btn{ bottom:90px; }
+    .banner .video-btn a{ padding:35px; }
+    .banner .video-btn a:after{ width:180px; height:180px; }
+    .banner .video-btn a:hover:after{ width:190px; height:190px; }
+    .products-block .nav{ padding:0 0 0 45px; }
+    .products-block .nav li a .box .text-panel .head{ font-size:18px; line-height:20px; padding:0; }
+    .plan-block .tab-block .nav{ width:70%; }
+    .plan-block .tab-block .tab-content #engine .tab-box{ width:100%; }
+    .plan-block .tab-block .tab-content .tab-pane .tab-box .box{ width:31%; }
+    .about-block:before { width:590px; height:1058px; }
+    .products-block .tab-content .img-panel img{ min-height:500px; }
+    .products-block .tab-content .tab-pane .tab-box .text-block p:last-child{ display:none; }
+    .products-block .tab-content .tab-pane .tab-box .text-block h3{ font-size:20px; line-height:25px; padding-bottom:20px; }
+}
+
+@media screen and (max-width:991px){
+    .navbar-default{ padding:15px 0; }
+    .navbar-default .logo-block{ width:120px; }
+    .navbar-default .rt-side .navigation ul li a{ padding:8px 12px; }
+    .navbar-default .rt-side .login-btn{ padding:0 12px 0 0; }
+    .navbar-default .rt-side .login-btn a{ padding:12px 30px; }
+    .banner .desc .text-panel h1{ font-size:45px; line-height:50px; padding:0 0 20px; }
+    .banner .desc .text-panel p{ width:57%; margin:0 0 30px; }
+    .banner .video-btn a{ padding:18px; width:80px; }
+    .banner .video-btn a:after{ width:100px; height:100px; }
+    .banner .video-btn a:hover:after{ width:110px; height:110px; }
+    .products-block .nav li a .box .text-panel .pra{ display:none; }
+    .products-block .nav li a .box{ align-items:center; }
+    .products-block .tab-content .tab-pane .tab-box .text-block{ padding-right:0; }
+    .plan-block .tab-block .nav{ width:100%; }
+    .plan-block .tab-block .tab-content .tab-pane .tab-box .box{ width:48%; }
+    .plan-block .tab-block .tab-content #engine .tab-box .box{ width:48%; }
+    .about-block{ padding:260px 0 0; }
+    .about-block .text-panel { padding:50px 0 0; }
+    .contact-block .text-panel{ padding:0; }
+    .contact-block .form-block{ padding:83px 26px 55px; }
+    .contact-block .text-panel p:last-child{ display:none; }
+    .contact-block .address-block{ padding:20px 20px 0; }
+    .contact-block .address-block ul li:before{ width:40px; height:40px; }
+    .contact-block .address-block ul{ display:block; }
+    .contact-block .address-block ul li:nth-child(1){ width:100%; }
+    .contact-block .address-block ul li{ display:block; margin:0 0 35px; padding:0 0 0 50px; }
+    .checkout-block .title p{ width:100%; }
+}
+
+@media screen and (max-width:767px){
+    .navbar-default .rt-side{ flex-direction:row-reverse; }
+    .navbar-default  a.mob_open_menu{ display:block; }
+    .navbar-default a.mob_open_menu i { color:#fff; background:#0baeca; padding:5px 7px; border-radius:2px; }
+    .navbar-default .navigation{ float:left; position:fixed; left:-300px; top:0; background:#171717; bottom:0; width:250px; z-index:99; transition:all 0.6s ease-in-out; padding:0; margin:0; }
+    .navbar-default .navigation.open_menu{ left:0; }
+    .navbar-default .navigation a.mob_close_menu { display:block; background:#0baeca; color:#ffff; padding:7px; text-align:right; }
+    .navbar-default .rt-side .navigation ul li{ display:block; padding:0; }
+    .navbar-default .rt-side .navigation ul li a { font-size:16px; line-height:18px; display:block; border:none; border-bottom:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:0; padding:8px; }
+    .navbar-default .rt-side .navigation ul li a:hover{ background-color:#0baeca; color:#000; }
+    .navbar-default.navbar-shrink .logo-block{ width:110px; }
+    .navbar-default .rt-side .login-btn a { padding:5px 20px; }
+    .banner .banner-img img{ min-height:500px; object-fit:cover; object-position:center; }
+    .banner .desc .text-panel p{ width:100%; }
+    .banner .desc .text-panel .quote-btn a:hover{ padding-right:60px; }
+    .about-block:before{ display:none; }
+    .about-block:after{ width:210px; height:238px; }
+    .banner .video-btn{ left:65%; }
+    .banner .video-btn a{ padding:10px; width:55px; }
+    .banner .video-btn a:after{ width:60px; height:60px; }
+    .banner .video-btn a:hover:after{ width:70px; height:70px; }
+    .products-block{ padding-bottom:40px; }
+    .products-block:after{ top:inherit; bottom:-60px; width:400px; height:720px; }
+    .products-block h2 span:after{ border-width:4px; }
+    .products-block h2{ font-size:35px; line-height:37px; padding-bottom:30px; }
+    .products-block .nav{ display:block; padding:0 20px; }
+    .products-block .nav li{ padding:0 0 12px; }
+    .products-block .nav li a{ padding:15px 17px 15px 15px; }
+    .products-block .nav li a .box .img-block{ width:20%; }
+    .products-block .nav li a .box .text-panel .head{ font-size:15px; line-height:17px; }
+    .products-block .nav li a .box .text-panel{ width:68%; padding:0 0 0 12px; }
+    .products-block .tab-content .tab-pane .tab-box .text-block{ width:100%; }
+    .products-block .tab-content .tab-pane .tab-box .icon-block{ display:none; }
+    .plan-block{ padding-top:60px; }
+    .plan-block h2 { font-size:35px; line-height:37px; padding:0 0 35px; }
+    .plan-block h2 span:after{ border-width:4px; }
+    .plan-block .tab-block .nav{ flex-direction:column; text-align:center; border-radius:10px; padding:10px; margin-bottom:50px; }
+    .plan-block .tab-block .tab-content .tab-pane .tab-box .box{ width:100%; margin-bottom:30px; }
+    .plan-block .tab-block .tab-content .tab-pane .tab-box .box h4{ padding:0 0 16px; }
+    .plan-block .tab-block .tab-content #engine .tab-box .box h6{ padding:30px 0 30px; }
+    .plan-block .tab-block .tab-content #engine .tab-box .box{ width:100%; }
+    .plan-block .tab-block .tab-content .tab-pane .tab-box .box:hover{ transform:none; }
+    .plan-block .tab-block .tab-content #marketing .tab-box{ padding:0; }
+    .plan-block .tab-block .tab-content #marketing .text-block h3{ font-size:16px; line-height:20px; padding:0 0 25px; }
+    .about-block{ padding:50px 0 0; }
+    .plan-block .tab-block .tab-content #marketing .text-block h3 span{ font-size:22px; }
+    .plan-block .tab-block .tab-content .tab-pane .tab-box .box h3{ padding:0 0 20px;}
+    .about-block .text-panel h3 { font-size:18px; line-height:20px; padding:0 0 8px; }
+    .about-block .text-panel h2{ font-size:35px; line-height:37px; padding: 0 0 20px; }
+    .about-block .text-panel h2 span:after{ border-width:4px; }
+    .about-block .text-panel p{ font-size: 15px; line-height:22px; padding:0 0 20px; }
+    .contact-block{ padding:80px 0 12px; }
+    .contact-block:after{ display:none; }
+    .contact-block .text-panel{ padding-bottom:25px; }
+    .contact-block .text-panel h2 { font-size:35px; line-height:37px; padding:0 0 15px; }
+    .contact-block .text-panel h3 { font-size:18px; line-height:20px; padding:0 0 25px; }
+    .contact-block .text-panel p { font-size:15px; line-height:24px; padding:0 0 20px; }
+    .contact-block .form-block { padding:20px 26px 20px; }
+    .contact-block .form-block h3 { font-size:20px; line-height:22px; padding:0 0 25px; }
+    .contact-block .form-block .form-group{ margin:0 0 30px; }
+    .contact-block .form-block .send-btn{ padding:0; }
+    .contact-block .address-block{ padding-top:40px; }
+    .clients-block{ padding:40px 0 40px; }
+    .checkout-block{ padding:35px 0 73%; }
+    .checkout-block .title h2{ font-size:35px; line-height:37px; padding:0 0 18px; }
+    .checkout-block .title h2 span:after{ border-width:4px; }
+    .footer{ padding:45px 0 20px; }
+    .footer .box { padding-bottom:10px; }
+    .footer .logo-block{ margin-bottom:20px; }
+    .footer .text-panel p{ width:100%; padding-bottom:15px; }
+    .footer .box h3 { font-size:20px; line-height:22px; padding:0 0 16px; }
+    .footer .box ul li { font-size:16px; line-height:18px; padding:0 0 16px; }
+    .footer .box ul li a{ display:block; }
+    .copy-right .inner-content{ flex-direction:column; padding:20px 0 15px; }
+    .copy-right .inner-content p{ padding-bottom:5px; }
+}
